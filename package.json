@@ -1,0 +1,12 @@
+{
+  "name": "studypilot-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A transparent, goal-driven adaptive study agent with optional LLM tool calling.",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

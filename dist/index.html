@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="description" content="StudyPilot is an adaptive study agent: set a goal, follow a plan, practise, and let feedback shape your next step.">
+ <meta name="theme-color" content="#6451cf"><title>StudyPilot · Your adaptive study agent</title>
+ <link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+ <a class="skip-link" href="#main">Skip to workspace</a>
+ <div class="shell">
+  <aside class="sidebar">
+   <a class="brand" href="./" aria-label="StudyPilot home"><span class="brand-icon">✳</span><span>studypilot<span class="brand-dot">.</span></span></a>
+   <div class="nav-caption">YOUR WORKSPACE</div>
+   <nav aria-label="Main navigation">
+    <button class="nav-item active" data-view="plan"><span class="nav-icon">◫</span> Study plan <span class="nav-arrow">↗</span></button>
+    <button class="nav-item" data-view="practice"><span class="nav-icon">◇</span> Practice</button>
+    <button class="nav-item" data-view="knowledge"><span class="nav-icon">▤</span> Knowledge base</button>
+    <button class="nav-item" data-view="progress"><span class="nav-icon">↗</span> My progress</button>
+   </nav>
+   <div class="sidebar-note"><span class="mini-spark">✳</span><strong>A little better,<br>every session.</strong><p>Your next step changes as you learn.</p><span class="local-pill"><i></i> Local agent · no key needed</span></div>
+   <div class="sidebar-bottom"><button class="nav-item" data-view="schema"><span class="nav-icon">⌘</span> How the agent works</button><a href="https://github.com/kritee-saxena/AI_AGENT" target="_blank" rel="noopener">Project repository ↗</a><div class="profile"><span class="avatar">S</span><div><strong>My study space</strong><small>Saved on this browser</small></div></div></div>
+  </aside>
+  <div class="content">
+   <header class="topbar"><span>Workspace <span class="crumb">/</span> <strong id="breadcrumb">Study plan</strong></span><span class="top-label"><span class="status-dot"></span> Ready when you are</span></header>
+   <main id="main">
+    <section class="page-intro"><div><span class="eyebrow">YOUR ADAPTIVE STUDY AGENT</span><h1 id="page-title">Make room for your<br><em>next breakthrough.</em></h1><p id="page-description">One goal. A clear plan. A next step that learns from you.</p></div><div class="intro-art" aria-hidden="true"><svg viewBox="0 0 210 170"><ellipse cx="107" cy="91" rx="85" ry="38" fill="none" stroke="#cdc4eb" stroke-width="1.5" transform="rotate(-25 107 91)"/><ellipse cx="107" cy="91" rx="85" ry="38" fill="none" stroke="#e0d9ee" stroke-width="1.5" transform="rotate(35 107 91)"/><circle cx="107" cy="91" r="39" fill="#e9e3f6"/><path d="M107 61l7 21 21 9-21 7-7 23-8-23-22-7 22-9z" fill="#715cd1"/><circle cx="31" cy="123" r="7" fill="#c4da9c"/><circle cx="170" cy="40" r="6" fill="#baa8e4"/><circle cx="173" cy="139" r="3" fill="#80709e"/><path d="M46 37v14M39 44h14" stroke="#b0a2cd" stroke-width="2"/></svg></div></section>
+    <div id="view-root"></div>
+    <footer class="footer"><span>Built for steady progress, one topic at a time.</span><button data-view="schema">How the agent works ↗</button></footer>
+   </main>
+  </div>
+ </div>
+ <dialog id="lesson-dialog"><button class="close-dialog" aria-label="Close lesson">×</button><div id="lesson-content"></div></dialog>
+ <dialog id="reset-dialog"><h2>Reset your learning history?</h2><p>This clears quiz results and completed sessions on this browser. Your goal and notes stay.</p><div class="button-row"><button class="button secondary" data-action="cancel-reset">Keep my progress</button><button class="button" data-action="confirm-reset">Reset progress</button></div></dialog>
+ <div id="toast" role="status" aria-live="polite"></div>
+ <script type="module" src="./app.js"></script>
+</body>
+</html>
